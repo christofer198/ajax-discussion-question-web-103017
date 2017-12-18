@@ -11,6 +11,7 @@
         .then( res => res.json() )
         .then( json => document.getElementById('fullname').innerText = json.results[0].name.first )
       }
+      document.getElementById('btn').addEventListener('click', fetchData)
     </script>
   </head>
   <body>
