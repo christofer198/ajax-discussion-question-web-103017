@@ -2,10 +2,8 @@
 document.getElementById('btn').addEventListener("click", function(){
   fetch("https://randomuser.me/api/")
   .then(res => res.json())
-  .then(json => something())
+  .then(json => function(){
+    document.getElementById('fullname').innerText(json.name.first)
+  })
+
 })
-
-
-function something() {
-  document.getElementById('fullname').innerText = json.name.first
-}
