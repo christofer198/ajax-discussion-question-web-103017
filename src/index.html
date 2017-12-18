@@ -85,11 +85,12 @@
     </div>
     <script type="text/javascript">
     function fetchData(){
-      var data = fetch('https://randomuser.me/api/')
+      fetch('https://randomuser.me/api/')
         .then( res => res.json() )
         .then( json => function(){
           document.getElementById('fullname').innerText = json.results[0].name.first
           document.getElementById('fullname').innerText += `   ${json.results[0].name.last}`
+
         }())
       }
       document.getElementById('btn').addEventListener('click', fetchData)
